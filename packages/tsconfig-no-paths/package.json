@@ -1,0 +1,44 @@
+{
+  "name": "tsconfig-no-paths",
+  "version": "0.0.0",
+  "description": "An optionated tsconfig checker to suppress for TS custom resolving",
+  "keywords": ["typescript", "tsconfig", "checker", "paths"],
+  "author": {
+    "name": "kazuya kawaguchi",
+    "email": "kawakazu80@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazupon/no-custom-resolving.git",
+    "directory": "packages/ts-no-paths"
+  },
+  "bugs": {
+    "url": "https://github.com/kazupon/no-custom-resolving/issues"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "bin": {
+    "tsc-no-paths": "./bin/cli.js"
+  },
+  "scripts": {
+    "dev": "tsc -p tsconfig.json --watch",
+    "build": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "typescript": ">=3.2"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "citty": "^0.1.6",
+    "mlly": "^1.5.0",
+    "pkg-types": "^1.0.3"
+  }
+}
