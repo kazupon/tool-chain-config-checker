@@ -23,6 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "run-p build:*",
+    "build:unplugin": "pnpm run --filter unplugin-no-custom-resolving build",
     "fix": "run-p fix:*",
     "fix:format": "pnpm format --write",
     "fix:lint": "run-p \"lint --fix\"",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "@eslint/js": "8.56.0",
+    "@types/node": "^20.11.19",
     "bumpp": "^9.3.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
