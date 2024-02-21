@@ -1,0 +1,45 @@
+{
+  "name": "no-custom-resolving",
+  "description": "An optionated tool chain plugins to suppress for JS / TS custom resolving",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazupon/no-custom-resolving.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "kazuya kawaguchi",
+    "email": "kawakazu80@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kazupon/no-custom-resolving/issues"
+  },
+  "homepage": "https://github.com/kazupon/no-custom-resolving#readme",
+  "packageManager": "pnpm@8.15.3",
+  "engines": {
+    "node": ">= 18.16"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "run-p fix:*",
+    "fix:format": "pnpm format --write",
+    "fix:lint": "run-p \"lint --fix\"",
+    "format": "prettier \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,json,yml,yaml,md}\" --list-different",
+    "format:check": "prettier --check --config ./prettier.config.mjs \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,json,yml,yaml,md}\"",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "8.56.0",
+    "bumpp": "^9.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "gh-changelogen": "^0.2.8",
+    "lint-staged": "^15.2.2",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.0.2"
+  }
+}
