@@ -22,16 +22,18 @@
     "node": ">= 18.16"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "run-p build:*",
-    "build:unplugin": "pnpm run --filter unplugin-no-custom-resolving build",
     "build:ts": "pnpm run --filter tsconfig-no-paths build",
+    "build:vite": "pnpm run --filter vite-config-checker build",
+    "play:vite": "pnpm run --filter play-vite-config-checker check",
     "fix": "run-p fix:*",
     "fix:format": "pnpm format --write",
     "fix:lint": "run-p \"lint --fix\"",
     "format": "prettier \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,json,yml,yaml,md}\" --list-different",
     "format:check": "prettier --check --config ./prettier.config.mjs \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,json,yml,yaml,md}\"",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "run-p test:*",
+    "test:vite": "pnpm run --filter vite-config-checker test"
   },
   "devDependencies": {
     "@eslint/js": "8.56.0",
