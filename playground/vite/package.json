@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check": "tsconfig-checker --paths \"\"false\"\" && vite-config-checker --alias \"\"false\"\"",
+    "check": "tsconfig-checker --paths=\"false\" & vite-config-checker --alias=\"false\"",
     "check:ts": "tsconfig-checker",
     "check:vite": "vite-config-checker"
   },
