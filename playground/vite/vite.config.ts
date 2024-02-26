@@ -8,7 +8,10 @@ export default defineConfig({
   resolve: {
     alias: { foo: '/foo', ...alias }
   },
-  plugins: [Inspect(), VueI18n({
-    include: ['src/locales/**']
-  })]
+  plugins: [
+    Inspect(),
+    VueI18n({
+      include: ['src/locales/**']
+    })
+  ]
 })

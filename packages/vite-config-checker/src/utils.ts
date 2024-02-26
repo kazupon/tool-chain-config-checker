@@ -9,16 +9,14 @@ export function convertAliasArgValue(arg: string): boolean | string[] {
 }
 
 function isAliasArg(arg: unknown): arg is boolean | string[] {
-  return typeof arg === 'boolean' || (Array.isArray(arg) && arg.every((id) => typeof id === 'string'))
+  return typeof arg === 'boolean' || (Array.isArray(arg) && arg.every(id => typeof id === 'string'))
 }
 
 function isAlias(entries: AliasOptions): entries is Alias[] {
   return Array.isArray(entries)
 }
 
-export function getAliasPatterns(
-  entries: AliasOptions | undefined
-): (string | RegExp)[] {
+export function getAliasPatterns(entries: AliasOptions | undefined): (string | RegExp)[] {
   if (!entries) {
     return []
   }
@@ -47,10 +45,7 @@ function matchesWithAliasKeys(pattern: string | RegExp, keys: string[]): boolean
   return keys.some(key => matches(pattern, key))
 }
 
-export function collectNotAllowAliasPattern(
-  entries: AliasOptions,
-  alias: string[]
-): NotAllowAliasPattern[] {
+export function collectNotAllowAliasPattern(entries: AliasOptions, alias: string[]): NotAllowAliasPattern[] {
   // difference 'entries' from 'alias'
   if (isAlias(entries)) {
     return entries.filter(entry => !matchesWithAliasKeys(entry.find, alias)) || []

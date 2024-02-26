@@ -14,11 +14,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kazupon/no-custom-resolving.git",
+    "url": "git+https://github.com/kazupon/tool-chain-config-checker.git",
     "directory": "packages/tsconfig-checker"
   },
   "bugs": {
-    "url": "https://github.com/kazupon/no-custom-resolving/issues"
+    "url": "https://github.com/kazupon/tool-chain-config-checker/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "bin",

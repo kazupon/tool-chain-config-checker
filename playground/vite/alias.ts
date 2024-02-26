@@ -1,3 +1,3 @@
 export default {
-   bar: '/bar'
+  bar: '/bar'
 }

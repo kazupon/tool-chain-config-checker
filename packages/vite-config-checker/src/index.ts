@@ -29,14 +29,14 @@ const main = defineCommand({
   },
   args: {
     alias: {
-      type: "string",
+      type: 'string',
       description: "allow 'resolve.alias' option, if you can disable it, specify 'false'",
       default: 'true'
     },
     config: {
       type: 'string',
       alias: 'c',
-      description: 'vite config file path',
+      description: 'vite config file path'
     }
   },
   async run({ args }) {
@@ -47,10 +47,15 @@ const main = defineCommand({
      */
 
     const configFile = args.config != '' ? args.config : undefined
-    const loadedConfig = await loadConfigFromFile({
-      command: 'build',
-      mode: 'production',
-    }, configFile, process.cwd(), 'silent')
+    const loadedConfig = await loadConfigFromFile(
+      {
+        command: 'build',
+        mode: 'production'
+      },
+      configFile,
+      process.cwd(),
+      'silent'
+    )
 
     if (loadedConfig == null) {
       throw new Error('not found vite config. please check it!')
@@ -81,7 +86,7 @@ const main = defineCommand({
     }
 
     consola.success(`OK: ${configPath}`)
-  },
-});
+  }
+})
 
 runMain(main)

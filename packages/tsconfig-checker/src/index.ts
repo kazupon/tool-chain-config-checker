@@ -5,7 +5,6 @@ import path from 'node:path'
 import { loadTsConfig, convertPathsArgValue, getPathsPatterns, collectNotAllowPathsPattern } from './utils'
 
 import { definePackageJSON } from 'pkg-types'
-import ts from 'typescript'
 
 function getPackageJSON(base: string) {
   try {
@@ -20,7 +19,6 @@ const { name, version, description } = getPackageJSON(__dirname)
 consola.debug('name', name)
 consola.debug('version', version)
 
-
 const main = defineCommand({
   meta: {
     name,
@@ -29,21 +27,21 @@ const main = defineCommand({
   },
   args: {
     paths: {
-      type: "string",
+      type: 'string',
       description: "allow 'compilerOptions.paths' option, if you can disable it, specify 'false'",
       default: 'true'
-    },
+    }
   },
   async run({ args }) {
-    const tscPath = require.resolve('typescript/lib/tsc');
+    const tscPath = require.resolve('typescript/lib/tsc')
     consola.debug('tsc path', tscPath)
 
     // load tsconfig.json
     const cwd = process.cwd()
-    const { rawData: data, config: tsConfig, path: tsConfigPath } = await loadTsConfig(tscPath, cwd)
+    const { config: tsConfig, path: tsConfigPath } = await loadTsConfig(tscPath, cwd)
 
     // check 'paths' option
-    consola.debug('config paths', args.paths);
+    consola.debug('config paths', args.paths)
     const paths = convertPathsArgValue(args.paths)
     consola.debug('paths parsed value', paths)
     const pathsPatterns = getPathsPatterns(tsConfig.compilerOptions?.paths)
@@ -64,7 +62,7 @@ const main = defineCommand({
     }
 
     consola.success(`OK: ${tsConfigPath}`)
-  },
-});
+  }
+})
 
 runMain(main)

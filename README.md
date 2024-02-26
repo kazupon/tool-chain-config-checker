@@ -1,5 +1,5 @@
-# no-custom-resolving
+# tool-chain-config-checker
 
-An optionated tool chain plugins to suppress for JS / TS custom resolving
+An optionated JS / TS tool chain config cheker
 
 > ⚠️ This repo is WIP

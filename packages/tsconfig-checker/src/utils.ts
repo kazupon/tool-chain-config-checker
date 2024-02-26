@@ -3,7 +3,10 @@ import { defineTSConfig, resolveTSConfig } from 'pkg-types'
 
 import type { TSConfig } from 'pkg-types'
 
-export async function loadTsConfig(tscPath: string, cwdContext = ''): Promise<{ rawData: string, config: TSConfig, path: string }> {
+export async function loadTsConfig(
+  tscPath: string,
+  cwdContext = ''
+): Promise<{ rawData: string; config: TSConfig; path: string }> {
   const cwd = cwdContext || process.cwd()
 
   const tsc = await spawn('node', [tscPath, '--showConfig'], {
@@ -22,7 +25,7 @@ export async function loadTsConfig(tscPath: string, cwdContext = ''): Promise<{ 
 }
 
 function isPathsArg(arg: unknown): arg is boolean | string[] {
-  return typeof arg === 'boolean' || (Array.isArray(arg) && arg.every((id) => typeof id === 'string'))
+  return typeof arg === 'boolean' || (Array.isArray(arg) && arg.every(id => typeof id === 'string'))
 }
 
 export type PathsOption = { [entry: string]: string[] }
@@ -46,10 +49,12 @@ export function convertPathsArgValue(arg: string): boolean | string[] {
   throw new Error(`Invalid 'compilerOptions.paths' option value: ${arg}`)
 }
 
-export function getPathsPatterns(
-  paths: PathsOption | undefined
-): string[] {
-  return isPaths(paths) ? Object.keys(paths).map(key => paths[key] && paths[key].length > 0 ? key : undefined).filter(Boolean) as string[] : []
+export function getPathsPatterns(paths: PathsOption | undefined): string[] {
+  return isPaths(paths)
+    ? (Object.keys(paths)
+        .map(key => (paths[key] && paths[key].length > 0 ? key : undefined))
+        .filter(Boolean) as string[])
+    : []
 }
 
 export function matches(pattern: string, id: string) {
@@ -66,11 +71,7 @@ function matchesWithPathsKeys(pattern: string, keys: string[]): boolean {
   return keys.some(key => matches(pattern, key))
 }
 
-
-export function collectNotAllowPathsPattern(
-  pathsOption: PathsOption,
-  paths: string[]
-): PathsOption | null {
+export function collectNotAllowPathsPattern(pathsOption: PathsOption, paths: string[]): PathsOption | null {
   const ret = Object.entries(pathsOption)
     .filter(([key]) => !matchesWithPathsKeys(key, paths))
     .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})

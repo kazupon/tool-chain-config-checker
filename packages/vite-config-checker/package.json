@@ -14,16 +14,19 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kazupon/no-custom-resolving.git",
+    "url": "git+https://github.com/kazupon/tool-chain-config-checker.git",
     "directory": "packages/vite-config-checker"
   },
   "bugs": {
-    "url": "https://github.com/kazupon/no-custom-resolving/issues"
+    "url": "https://github.com/kazupon/tool-chain-config-checker/issues"
   },
   "files": [
     "bin",
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "vite-config-checker": "./bin/cli.js"
   },

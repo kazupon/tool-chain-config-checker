@@ -1,11 +1,11 @@
 {
-  "name": "no-custom-resolving",
-  "description": "An optionated tool chain plugins to suppress for JS / TS custom resolving",
+  "name": "tool-chain-config-checker",
+  "description": "An optionated JS / TS tool chain config cheker",
   "private": true,
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kazupon/no-custom-resolving.git"
+    "url": "git+https://github.com/kazupon/tool-chain-config-checker.git"
   },
   "keywords": [],
   "author": {
@@ -14,9 +14,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kazupon/no-custom-resolving/issues"
+    "url": "https://github.com/kazupon/tool-chain-config-checker/issues"
   },
-  "homepage": "https://github.com/kazupon/no-custom-resolving#readme",
+  "homepage": "https://github.com/kazupon/tool-chain-config-checker#readme",
   "packageManager": "pnpm@8.15.3",
   "engines": {
     "node": ">= 18.16"
