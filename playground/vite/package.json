@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check": "vite-config-checker"
+    "check": "tsconfig-checker --paths \"\"false\"\" && vite-config-checker --alias \"\"false\"\"",
+    "check:ts": "tsconfig-checker",
+    "check:vite": "vite-config-checker"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^2.0.0",
     "vite": "^5.1.2",
+    "tsconfig-checker": "workspace:*",
     "vite-config-checker": "workspace:*",
     "vite-plugin-inspect": "^0.8.3"
   },

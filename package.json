@@ -23,9 +23,11 @@
   },
   "scripts": {
     "build": "run-p build:*",
-    "build:ts": "pnpm run --filter tsconfig-no-paths build",
+    "build:ts": "pnpm run --filter tsconfig-checker build",
     "build:vite": "pnpm run --filter vite-config-checker build",
-    "play:vite": "pnpm run --filter play-vite-config-checker check",
+    "play:check": "pnpm run --filter play-vite-config-checker check",
+    "play:ts": "pnpm run --filter play-vite-config-checker check:ts",
+    "play:vite": "pnpm run --filter play-vite-config-checker check:vite",
     "fix": "run-p fix:*",
     "fix:format": "pnpm format --write",
     "fix:lint": "run-p \"lint --fix\"",
@@ -33,6 +35,7 @@
     "format:check": "prettier --check --config ./prettier.config.mjs \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,json,yml,yaml,md}\"",
     "lint": "eslint .",
     "test": "run-p test:*",
+    "test:ts": "pnpm run --filter tsconfig-checker test",
     "test:vite": "pnpm run --filter vite-config-checker test"
   },
   "devDependencies": {
