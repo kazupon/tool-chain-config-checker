@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check": "tsconfig-checker --paths=\"false\" & vite-config-checker --alias=\"false\"",
+    "check": "tsconfig-checker --paths=\"false\" & vite-config-checker --alias=\"false\" & vite-config-checker --alias=\"false\" --config vitest.config.ts",
     "check:ts": "tsconfig-checker",
-    "check:vite": "vite-config-checker"
+    "check:vite": "vite-config-checker",
+    "check:vitest": "vite-config-checker --config vitest.config.ts"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^2.0.0",

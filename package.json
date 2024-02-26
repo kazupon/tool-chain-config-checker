@@ -28,6 +28,7 @@
     "play:check": "pnpm run --filter play-vite-config-checker check",
     "play:ts": "pnpm run --filter play-vite-config-checker check:ts",
     "play:vite": "pnpm run --filter play-vite-config-checker check:vite",
+    "play:vitest": "pnpm run --filter play-vite-config-checker check:vitest",
     "fix": "run-p fix:*",
     "fix:format": "pnpm format --write",
     "fix:lint": "run-p \"lint --fix\"",
