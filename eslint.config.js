@@ -5,7 +5,7 @@ import configPrettier from 'eslint-config-prettier'
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
   {
-    ignores: ['**/dist/**', 'eslint.config.js', '.eslintcache', '**/bin/**']
+    ignores: ['**/dist/**', 'eslint.config.js', '.eslintcache', '**/bin/**', 'scripts/preinstall.js']
   },
 
   js.configs.recommended,

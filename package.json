@@ -23,6 +23,7 @@
   },
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
+    "preinstall": "node ./scripts/preinstall.js",
     "changelog": "gh-changelogen --repo=kazupon/tool-chain-config-checker",
     "build": "run-p build:*",
     "build:ts": "pnpm run --filter tsconfig-checker build",
@@ -43,14 +44,18 @@
   },
   "devDependencies": {
     "@eslint/js": "8.56.0",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.11.19",
     "bumpp": "^9.3.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "gh-changelogen": "^0.2.8",
+    "globby": "^14.0.1",
+    "js-yaml": "^4.1.0",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.0.2"
   },
