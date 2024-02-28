@@ -24,6 +24,7 @@
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
     "preinstall": "node ./scripts/preinstall.js",
+    "release": "bumpp --commit \"release: v%s\" --push --tag",
     "build": "run-p build:*",
     "build:ts": "pnpm run --filter tsconfig-checker build",
     "build:vite": "pnpm run --filter vite-config-checker build",
