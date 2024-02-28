@@ -19,7 +19,7 @@ for PKG in packages/* ; do
     pushd $PKG
     TAG="latest"
     echo "⚡ Publishing $PKG with tag $TAG"
-    # pnpm publish --access public --no-git-checks --tag $TAG
+    pnpm publish --access public --no-git-checks --tag $TAG
     popd > /dev/null
   fi
 done
