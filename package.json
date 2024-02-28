@@ -24,7 +24,6 @@
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
     "preinstall": "node ./scripts/preinstall.js",
-    "changelog": "gh-changelogen --repo=kazupon/tool-chain-config-checker",
     "build": "run-p build:*",
     "build:ts": "pnpm run --filter tsconfig-checker build",
     "build:vite": "pnpm run --filter vite-config-checker build",
@@ -55,7 +54,6 @@
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
-    "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.0.2"
   },
