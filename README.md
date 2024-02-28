@@ -6,10 +6,9 @@ An optionated JS / TS tool chain config cheker
 
 ## ✅ Checkers
 
-| Checker | Version | LICENSE |
-| ------- | :------ | :------ |
-
-| [tsconfig-checker](packages/tsconfig-checker) | [![npm version][npm-version-tsconfig-checker-src]][npm-version-tsconfig-checker-href] | [MIT](packages/tsconfig-checker/LICENSE) |
+| Checker                                             | Version                                                                                     | LICENSE                                     |
+| --------------------------------------------------- | :------------------------------------------------------------------------------------------ | :------------------------------------------ |
+| [tsconfig-checker](packages/tsconfig-checker)       | [![npm version][npm-version-tsconfig-checker-src]][npm-version-tsconfig-checker-href]       | [MIT](packages/tsconfig-checker/LICENSE)    |
 | [vite-config-checker](packages/vite-config-checker) | [![npm version][npm-version-vite-config-checker-src]][npm-version-vite-config-checker-href] | [MIT](packages/vite-config-checker/LICENSE) |
 
 ## 🙌 Contributing guidelines
