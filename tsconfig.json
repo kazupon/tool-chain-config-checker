@@ -4,6 +4,6 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext"
-  },
-  "include": ["scripts/**/*.ts"]
+  }
+  // "include": ["scripts/**/*.ts"]
 }
