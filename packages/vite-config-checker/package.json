@@ -1,6 +1,6 @@
 {
   "name": "vite-config-checker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An optionated vite config checker",
   "keywords": [
     "vite",
