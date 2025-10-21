@@ -45,7 +45,7 @@
   "devDependencies": {
     "@eslint/js": "8.57.1",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.11.19",
+    "@types/node": "^22.0.0",
     "bumpp": "^9.3.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
