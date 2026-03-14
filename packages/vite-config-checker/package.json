@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "consola": "^3.2.3",
-    "citty": "^0.1.6",
+    "citty": "^0.2.0",
     "pkg-types": "^1.0.3"
   },
   "devDependencies": {
