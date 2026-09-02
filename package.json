@@ -50,7 +50,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "gh-changelogen": "^0.2.8",
-    "globby": "^14.0.1",
+    "globby": "^16.0.0",
     "js-yaml": "^4.1.0",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
