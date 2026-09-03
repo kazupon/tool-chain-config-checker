@@ -27,8 +27,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.56.0)
       gh-changelogen:
-        specifier: ^0.2.8
-        version: 0.2.8
+        specifier: ^2.0.0
+        version: 2.0.2
       globby:
         specifier: ^14.0.1
         version: 14.0.1
@@ -398,11 +398,6 @@ packages:
   /@eslint/js@8.57.1:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /@fastify/busboy@2.1.0:
-    resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
-    engines: {node: '>=14'}
     dev: true
 
   /@humanwhocodes/config-array@0.11.14:
@@ -1747,10 +1742,6 @@ packages:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
     dev: true
 
-  /destr@1.2.2:
-    resolution: {integrity: sha512-lrbCJwD9saUQrqUfXvl6qoM+QN3W7tLV5pAOs+OqOmopCCz/JkE05MHedJR1xfk4IAnZuJXPVuN5+7jNA2ZCiA==}
-    dev: true
-
   /destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==}
     dev: true
@@ -2089,15 +2080,13 @@ packages:
     engines: {node: '>=16'}
     dev: true
 
-  /gh-changelogen@0.2.8:
-    resolution: {integrity: sha512-E9mRhhmpol2WkCqqljVhg+aUST0RE5WEDbh+oeF4MGIA1T+UvgYxv7sFQemnvY5EWj3pg2xz8cVzJX6gNvgHSw==}
-    engines: {node: '>= 14.18'}
+  /gh-changelogen@2.0.2:
+    resolution: {integrity: sha512-4Qsyts73PSxeUNigYHa46TDAT/GDt5sW2B+C36wf0gUNGx8rjKuR21K9axE6nm1ZcRqSKfdpshsq4a9TMBNdpA==}
+    engines: {node: '>= 22'}
     hasBin: true
     dependencies:
-      ohmyfetch: 0.4.21
-      semver: 7.6.0
-      zod: 3.22.4
-      zodiarg: 0.2.1(zod@3.22.4)
+      gunshi: 0.37.1
+      semver: 7.8.5
     dev: true
 
   /giget@1.2.1:
@@ -2176,6 +2165,11 @@ packages:
 
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
+    dev: true
+
+  /gunshi@0.37.1:
+    resolution: {integrity: sha512-C3t35z65PQpAHay/gzEu4J/7SNWXn2NhfC4RfZQPxyOqkPfDTizthxCPoSU48OazoVherCuCpFDKI1qcY425Gw==}
+    engines: {node: '>= 22'}
     dev: true
 
   /has-flag@4.0.0:
@@ -2590,10 +2584,6 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /node-fetch-native@0.1.8:
-    resolution: {integrity: sha512-ZNaury9r0NxaT2oL65GvdGDy+5PlSaHTovT6JV5tOW07k1TQmgC0olZETa4C9KZg0+6zBr99ctTYa3Utqj9P/Q==}
-    dev: true
-
   /node-fetch-native@1.6.2:
     resolution: {integrity: sha512-69mtXOFZ6hSkYiXAVB5SqaRvrbITC/NPyqv7yuu/qw0nmgPyYbIMYYNIDhNtwPrzk0ptrimrLz/hhjvm4w5Z+w==}
     dev: true
@@ -2642,16 +2632,6 @@ packages:
 
   /ohash@1.1.3:
     resolution: {integrity: sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==}
-    dev: true
-
-  /ohmyfetch@0.4.21:
-    resolution: {integrity: sha512-VG7f/JRvqvBOYvL0tHyEIEG7XHWm7OqIfAs6/HqwWwDfjiJ1g0huIpe5sFEmyb+7hpFa1EGNH2aERWR72tlClw==}
-    deprecated: Package renamed to https://github.com/unjs/ofetch
-    dependencies:
-      destr: 1.2.2
-      node-fetch-native: 0.1.8
-      ufo: 0.8.6
-      undici: 5.28.3
     dev: true
 
   /once@1.4.0:
@@ -3038,6 +3018,12 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /semver@7.8.5:
+    resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: true
+
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -3287,10 +3273,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  /ufo@0.8.6:
-    resolution: {integrity: sha512-fk6CmUgwKCfX79EzcDQQpSCMxrHstvbLswFChHS0Vump+kFkw7nJBfTZoC1j0bOGoY9I7R3n2DGek5ajbcYnOw==}
-    dev: true
-
   /ufo@1.4.0:
     resolution: {integrity: sha512-Hhy+BhRBleFjpJ2vchUNN40qgkh0366FWJGqVLYBHev0vpHTrXSA0ryT+74UiW6KWsldNurQMKGqCm1M2zBciQ==}
 
@@ -3300,13 +3282,6 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-
-  /undici@5.28.3:
-    resolution: {integrity: sha512-3ItfzbrhDlINjaP0duwnNsKpDQk3acHI3gVJ1z4fmwMK31k5G9OVIAMLSIaP6w4FaGkaAkN6zaQO9LUvZ1t7VA==}
-    engines: {node: '>=14.0'}
-    dependencies:
-      '@fastify/busboy': 2.1.0
-    dev: true
 
   /unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
@@ -3645,16 +3620,4 @@ packages:
   /yocto-queue@1.2.1:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
     engines: {node: '>=12.20'}
-    dev: true
-
-  /zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
-    dev: true
-
-  /zodiarg@0.2.1(zod@3.22.4):
-    resolution: {integrity: sha512-Vbd8aW709iKX0XbMvjYkyjQYDBvWKedaUWNelcNeO1OxVYJ8jqUpj6lRBoO0PtN3b1DM6Ykz+hf9Y8e9pczmLQ==}
-    peerDependencies:
-      zod: 3.*
-    dependencies:
-      zod: 3.22.4
     dev: true
